@@ -5,6 +5,9 @@ Initially forked from [here](https://github.com/binder-examples/conda). Thank yo
 [![Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/binder/v2/gh/c4therine/paml-binder-Pitt/edit/master?urlpath=lab)
 
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/c4therine/paml-binder-Pitt/7dcff1f4aa49408525e1f04c9a3b82a9f0591fb5)
+
+
 ## Walkthrough
 
 Enter the first direcotry
