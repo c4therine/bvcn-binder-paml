@@ -33,6 +33,10 @@ Check that the correct input/output files are in the codeml.ctl file
 Run codeml
 
     codeml 20200106_P32_8_PA1666_vs_Psyring.codeml.ctl.txt
+    
+Examine output and find the dN/dS among other interesting details
+
+    less -S 20200106_P32_8_PA1666_vs_Psyring.codemlOutput.txt
 
 
 (2) Compare same P. aeruginosa clinical isolate's lip2 gene (PA1666) to homolog in a distantly-related P. aeruginosa strain (PA7)
@@ -52,3 +56,7 @@ Check that the correct input/output files are in the codeml.ctl file
 Run codeml
 
     codeml 20200106_P32_8_PA1666_vs_PA7.codeml.ctl.txt
+    
+Examine output and find the dN/dS among other interesting details
+
+    less -S 20200106_P32_8_PA1666_vs_PA7.codemlOutput.txt
