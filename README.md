@@ -8,55 +8,54 @@ Initially forked from [here](https://github.com/binder-examples/conda). Thank yo
 
 ## Walkthrough
 
+Two comparisons in tutorial: 
+(1) Low dN/dS: Compare P. aeruginosa clinical isolate P32_8's wspF gene to homolog in a distantly-related P. aeruginosa strain (PA7)
+(2) High dN/dS: Compare a different clinical isolate's wspF gene to PA7
+
 Enter the first direcotry
 
-    cd pseudomonas/
+    cd P32_8_wspF_vs_PA7/
 
-Two comparisons in tutorial: 
-(1) Interspecies: Compare P. aeruginosa clinical isolate P32_8's lip2 gene (PA1666) to homolog in another Pseudomonas species (P. syringiae)
-(2) Intraspecies: Compare same clinical isolate's gene to a homolog in a distantly-related P. aeruginosa strain (PA7)
+(1) P. aeruginosa P32_8's wspF versus PA7's wspF (PSPA7_1435)
 
-(1) P. aeruginosa P32_8's lip2 versus P. syringiae's lip2
+View the FASTA amino acid file (.faa)
 
-Align the FASTA amino acid file
+    less P32_8_wspF_vs_PA7.faa
 
-    muscle -in 20200106_P32_8_PA1666_vs_Psyring.faa.txt -out 20200106_P32_8_PA1666_vs_Psyring.fa
+Align the FASTA amino acid file using MUSCLE. THe .fa ouutput is the peptide alignment.
 
-Use pal2nal to make a codon alignment from the peptide alignment and nucleotide sequence
+    muscle -in P32_8_wspF_vs_PA7.faa -out P32_8_wspF_vs_PA7.fa
 
-    pal2nal.pl 20200106_P32_8_PA1666_vs_Psyring.fa 20200106_P32_8_PA1666_vs_Psyring.ffn -output fasta > 20200106_P32_8_PA1666_vs_Psyring.codonalign.fa
+Use pal2nal to make a codon alignment from the peptide alignment and nucleotide sequence.
 
-Check that the correct input/output files are in the codeml.ctl file
+    pal2nal.pl P32_8_wspF_vs_PA7.fa P32_8_wspF_vs_PA7.ffn -output fasta > P32_8_wspF_vs_PA7.codonalign.fa
 
-    less 20200106_P32_8_PA1666_vs_Psyring.codeml.ctl.txt
+Check that the correct input/output files are in the codeml.ctl file that I already made.
 
-Run codeml
+    less P32_8_wspF_vs_PA7.codeml.ctl
 
-    codeml 20200106_P32_8_PA1666_vs_Psyring.codeml.ctl.txt
+Run codeml using the .ctl file
+
+    codeml P32_8_wspF_vs_PA7.codeml.ctl
     
-Examine output and find the dN/dS among other interesting details
+Examine output and find the dN/dS among other interesting details.
 
-    less -S 20200106_P32_8_PA1666_vs_Psyring.codemlOutput.txt
-
-
-(2) Compare same P. aeruginosa clinical isolate's lip2 gene (PA1666) to homolog in a distantly-related P. aeruginosa strain (PA7)
-
-Align the FASTA amino acid file
-
-    muscle -in 20200106_P32_8_PA1666_vs_PA7.faa.txt -out 20200106_P32_8_PA1666_vs_PA7.fa
-
-Use pal2nal to make a codon alignment from the peptide alignment and nucleotide sequence
-
-    pal2nal.pl 20200106_P32_8_PA1666_vs_PA7.fa 20200106_P32_8_PA1666_vs_PA7.ffn -output fasta > 20200106_P32_8_PA1666_vs_PA7.codonalign.fa
-
-Check that the correct input/output files are in the codeml.ctl file
-
-    less 20200106_P32_8_PA1666_vs_PA7.codeml.ctl.txt
-
-Run codeml
-
-    codeml 20200106_P32_8_PA1666_vs_PA7.codeml.ctl.txt
+    less -S P32_8_wspF_vs_PA7.codemlOutput.txt
     
-Examine output and find the dN/dS among other interesting details
+The dN/dS value is low (0.0299), suggesting that this gene has evolved under purifying selection in P32_8. 
 
-    less -S 20200106_P32_8_PA1666_vs_PA7.codemlOutput.txt
+
+(2) Compare a different P. aeruginosa clinical isolate (P24_18)'s wspF gene to the same homolog PA7
+
+Open the second directory
+
+    cd ..
+    cd P24_18_wspF_vs_PA7
+
+To save time, I have already run codeML for this comparison. Examine the files that are in the directory and find the output file.
+
+    ls 
+    less -S P24_18_wspF_vs_PA7.codemlOutput.txt
+    
+In P24_18, wspF has a higher dN/dS (0.162), but still not likely to indicate that this gene evolved under neutral or positive selection. 
+A closer examination of the peptide and codon alignments revealed that a deletion occurred in P24_18's wspF, leading to erroneous amino acids at the C-terminus of the protein. 
