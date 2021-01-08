@@ -9,6 +9,7 @@ Initially forked from [here](https://github.com/binder-examples/conda). Thank yo
 ## Walkthrough
 
 Two comparisons in tutorial: 
+
 (1) Low dN/dS: Compare P. aeruginosa clinical isolate P32_8's wspF gene to homolog in a distantly-related P. aeruginosa strain (PA7)
 (2) High dN/dS: Compare a different clinical isolate's wspF gene to PA7
 
