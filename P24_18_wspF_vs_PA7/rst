@@ -1,0 +1,7 @@
+Supplemental results for CODEML (seqf: P24_18_wspF_vs_PA7.codonalign.fa  treef: )
+
+
+pairwise comparison (Goldman & Yang 1994)
+seq seq        N       S       dN       dS     dN/dS   Paras.
+  2   1    758.6    213.4   0.1080   0.6656   0.1622   0.6911   1.8492   0.1622 -1803.264
+

@@ -1,5 +1,5 @@
-      seqfile = 20200106_P32_8_PA1666_vs_PA7.codonalign.fa * sequence data filename
-      outfile = 20200106_P32_8_PA1666_vs_PA7.codemlOutput.txt   * main result file name
+      seqfile = P32_8_wspF_vs_PA7.codonalign.fa  * sequence data filename
+      outfile = P32_8_wspF_vs_PA7.codemlOutput.txt  * main result file name
 
         noisy = 0  * 0,1,2,3,9: how much rubbish on the screen
       verbose = 1  * 0: concise; 1: detailed, 2: too much
