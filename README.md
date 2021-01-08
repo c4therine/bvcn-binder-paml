@@ -12,11 +12,13 @@ Two comparisons in tutorial:
 (1) Low dN/dS: Compare P. aeruginosa clinical isolate P32_8's wspF gene to homolog in a distantly-related P. aeruginosa strain (PA7)
 (2) High dN/dS: Compare a different clinical isolate's wspF gene to PA7
 
+##
+
+(1) P. aeruginosa P32_8's wspF versus PA7's wspF (PSPA7_1435)
+
 Enter the first direcotry
 
     cd P32_8_wspF_vs_PA7/
-
-(1) P. aeruginosa P32_8's wspF versus PA7's wspF (PSPA7_1435)
 
 View the FASTA amino acid file (.faa)
 
@@ -45,9 +47,9 @@ Examine output and find the dN/dS among other interesting details.
 The dN/dS value is low (0.0299), suggesting that this gene has evolved under purifying selection in P32_8. 
 
 
+##
 
-
-(2) Compare a different P. aeruginosa clinical isolate (P24_18)'s wspF gene to the same homolog PA7
+(2) Compare a different P. aeruginosa clinical isolate (P24_18)'s wspF gene to the same homolog in PA7
 
 Open the second directory
 
