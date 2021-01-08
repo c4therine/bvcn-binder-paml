@@ -45,6 +45,8 @@ Examine output and find the dN/dS among other interesting details.
 The dN/dS value is low (0.0299), suggesting that this gene has evolved under purifying selection in P32_8. 
 
 
+
+
 (2) Compare a different P. aeruginosa clinical isolate (P24_18)'s wspF gene to the same homolog PA7
 
 Open the second directory
